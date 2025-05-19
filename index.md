@@ -81,14 +81,13 @@ $$ \pi(\mathbf{x}|\mathbf{z}) = \prod_{t = 1}^{T} \pi(x\_t|z\_t), $$
 <h4 style="font-size: 2em; font-weight: bold;">Test-Time Optimization of Latent Representations</h4>
 
 Assuming the *independence of the latent representations*, the test-time optimization is:
-$$
-\mathbf{z} \leftarrow \mathbf{z} + \eta  \nabla_{\mathbf{z}} \mathcal{J}(\mathbf{z}),
-$$
+
+$$ \mathbf{z} \leftarrow \mathbf{z} + \eta  \nabla_{\mathbf{z}} \mathcal{J}(\mathbf{z}), $$
+
 and the gradient is calculated as follows:
-<br/>
-$$
-[\nabla_{\mathbf{z}} \mathcal{J}(\mathbf{z})]_t = \mathbb{E}_{\mathbf{x} \sim \pi(\mathbf{x}|\mathbf{z})}\left[R(\mathbf{x},\mathbf{c})\nabla_{z_t} \log \pi(x_t|z_t)\right],
-$$
+
+$$ [\nabla_{\mathbf{z}}\mathcal{J}(\mathbf{z})]_t =\mathbb{E}_{\mathbf{x}\sim\pi(\mathbf{x}|\mathbf{z})}\left[R(\mathbf{x},\mathbf{c})\nabla_{z_t} \log\pi(x_t|z_t)\right], $$
+
 where $t$ denotes the position of the latent representation.
 
 
