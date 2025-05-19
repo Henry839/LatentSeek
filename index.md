@@ -180,9 +180,14 @@ The LatentSeek algorithm is described in Algorithm 1. This algorithm iteratively
 </div>
 </section>
 
+<section class="section">
+    <div class="container is-max-desktop" markdown="1"> 
 <h2 style="font-size: 2em; font-weight: bold;">BibTex</h2>
 
 ```bibtex
 TBA
 
 ```
+
+</div>
+</section>
