@@ -173,10 +173,16 @@ The LatentSeek algorithm is described in Algorithm 1. This algorithm iteratively
 <br/>
 
 <ol>
-  <li>Test-time scaling can be achieved without necessitating a dense reward function in our setting.</li>
-  <li>Searching through the latent space offers a promising new direction for test-time scaling.</li>
+  <li>Test-time scaling can be achieved **without necessitating a dense reward function** in our setting.</li>
+  <li>Searching through the latent space offers a **promising new direction** for test-time scaling.</li>
 </ol>
 <br/>
+
+<figure class="image" style="display: flex; justify-content: center; align-items: center; flex-direction: column;" id="table1">
+  <img src="{{ 'LatentSeek/assets/img/extreme_scaling.png' | relative_url }}" style="width: 100%; max-width: 1000px; height: auto"/>
+  <figcaption><span class="dnerf">Figure 3.</span> Performance of Extreme Scaling on MATH-500 \cite{hendrycksmath2021} and AIME2024. Setting the maximum update iteration to 256. K: average number of outputs or iterations.</figcaption>
+</figure>
+1. The latent space represents a more **efficient option** for test-time scaling compared to the explicit space
 
 </div>
 </section>
