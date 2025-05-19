@@ -68,7 +68,10 @@ code: https://github.com/bigai-nlco/LatentSeek
 </div>
 <section class="section">
     <div class="container is-max-desktop" markdown="1"> 
-LatentSeek is a novel framework that enhances LLM reasoning through <b>Test Time Instance-level Adaptation (TTIA)</b> within the model's <b>latent space</b>. The latent representations are optimized during the test time using the policy gradient method, to maximize the expected reward. These optimized representations are subsequently decoded into token sequences, which are utilized to compute a new reward, which are then used to guide the next iteration.
+<h2 style="font-size: 2em; font-weight: bold;">Introduction</h2>
+Reasoning ability, a core component of human intelligence, continues to pose a significant challenge for Large Language Models (LLMs) in the pursuit of AGI. Although model performance has improved under the training scaling law, significant challenges remain, particularly with respect to training algorithms—such as catastrophic forgetting—and the limited availability of novel training data. As an alternative, test-time scaling enhances reasoning performance by increasing test-time computation without parameter updating. Unlike prior methods in this paradigm focused on token space, we propose leveraging latent space for more effective reasoning and better adherence to the test-time scaling law.
+<br/>
+The introduced framework, named LatentSeek, enhances LLM reasoning through <b>Test Time Instance-level Adaptation (TTIA)</b> within the model's <b>latent space</b>. The latent representations are optimized during the test time using the policy gradient method, to maximize the expected reward. These optimized representations are subsequently decoded into token sequences, which are utilized to compute a new reward, which are then used to guide the next iteration.
     </div>
 </section>
 
