@@ -41,6 +41,24 @@ google_analytics: G-XD4J271NBT
 plugins:
   - jekyll-feed
 
+## => Markdown Enhancements
+##############################
+## Mathjax
+mathjax: true # false (default), true
+mathjax_autoNumber: true # false (default), true
+
+## Mermaid
+mermaid: # false (default), true
+
+## Chart
+chart: # false (default), true
+
+## => Build
+##############################
+markdown    : kramdown
+highlighter : rouge
+permalink   : date
+
 # Exclude from processing.
 # The following items will not be processed, by default.
 # Any item listed under the `exclude:` key here will be automatically added to
