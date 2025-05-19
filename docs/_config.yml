@@ -22,8 +22,8 @@ title: LatentSeek
 email: nlp@bigai.ai
 description: >- # this means to ignore newlines until "baseurl:"
   arXiv | From Hours to Minutes: Lossless Acceleration of Ultra Long Sequence Generation up to 100K Tokens
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://junzheshen.github.io" # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "/docs" # the subpath of your site, e.g. /blog
+url: "https://henry839.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 # related_research:
 #   - title: "VideoHallucer"
 #     url: "https://videohallucer.github.io/"
