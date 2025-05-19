@@ -4,6 +4,7 @@ layout: default
 
 title: > 
 Seek in the Dark: Reasoning via Test-Time Instance-Level Policy Gradient in Latent Space
+venue: arxiv
 authors:
     - name: Hengli Li
       tag: <i class="fas fa-star" style='font-size:11px'></i> 1, 2
