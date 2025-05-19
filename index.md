@@ -9,7 +9,7 @@ authors:
       url: https://github.com/Henry839
     - name: Chenxi Li
       tag: <i class="fas fa-star" style='font-size:11px'></i> 3
-      url: https://wutong4012.github.io/
+      url: https://openreview.net/profile?id=~Chenxi_Li7
     - name: Tong Wu
       tag: 2
       url: https://wutong4012.github.io/
@@ -21,7 +21,7 @@ authors:
       url: https://github.com/patrick-tssn
     - name: Zhaoxin Yu
       tag: 5
-      url: https://github.com/patrick-tssn
+      url: https://openreview.net/profile?id=~Zhaoxin_Yu1
     - name: Eric Hanchen Jiang
       tag: 6
       url: https://www.ericjiang.info/
