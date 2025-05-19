@@ -70,7 +70,7 @@ LatentSeek is a novel framework that enhances LLM reasoning through **Test-Time 
 
 <h2 style="font-size: 2em; font-weight: bold;">TTIA in Latent Space</h2>
 
-Given a reasoning problem instance $ \mathbf{c} $ as a context prompt, a pre-trained auto-regressive language model $\pi$, a reasoning token sequence $\mathbf{x} = (x\_1, x\_2, \ldots, x\_T)$, and denote the corresponding sequence of latent representations of $\mathbf{x}$ as $\mathbf{z} = (z\_1, z\_2, z\_3, \ldots, z\_T)$, the objective is:
+Given a reasoning problem instance $$\mathbf{c}$$ as a context prompt, a pre-trained auto-regressive language model $$\pi$$, a reasoning token sequence $$\mathbf{x} = (x\_1, x\_2, \ldots, x\_T)$$, and denote the corresponding sequence of latent representations of $$\mathbf{x}$$ as $$\mathbf{z} = (z\_1, z\_2, z\_3, \ldots, z\_T)$$, the objective is:
 
 $$ \mathbf{z}^* = \arg\max_{\mathbf{z}} \mathbb{E}_{\mathbf{x} \sim \pi(\mathbf{x}|\mathbf{z})}[R(\mathbf{x}, \mathbf{c})]. $$
 
@@ -88,7 +88,7 @@ and the gradient is calculated as follows:
 
 $$ [\nabla_{\mathbf{z}}\mathcal{J}(\mathbf{z})]_t =\mathbb{E}_{\mathbf{x}\sim\pi(\mathbf{x}|\mathbf{z})}\left[R(\mathbf{x},\mathbf{c})\nabla_{z_t} \log\pi(x_t|z_t)\right], $$
 
-where $t$ denotes the position of the latent representation.
+where $$t$$ denotes the position of the latent representation.
 
 
 <h4 style="font-size: 2em; font-weight: bold;">LatentSeek Algorithm</h4>
@@ -106,7 +106,8 @@ The LatentSeek algorithm is described in Algorithm 1. This algorithm iteratively
 **Reward Models: **
 
 - Self: self-reward
-- Perfect Sparse Reward Model (PSRM): A reward value of 0 is assigned exclusively when the generated final answer exactly matches the ground truth. In all other cases, a reward of $-1$ is given.
+
+- Perfect Sparse Reward Model (PSRM): A reward value of 0 is assigned exclusively when the generated final answer exactly matches the ground truth. In all other cases, a reward of $$-1$$ is given.
 
 <h5 align="center">Accuracy on GSM8K, MATH-500, AIME2024 datasets.</h5>
 
@@ -127,7 +128,6 @@ The LatentSeek algorithm is described in Algorithm 1. This algorithm iteratively
   <img src="{{ 'LatentSeek/assets/img/table2.jpg' | relative_url }}" style="width: 100%; max-width: 1000px; height: auto"/>
   <figcaption><span class="dnerf">Table 1.</span> Experimental results for LLaMA2 and LLaMA3.1 under varying prefix lengths, generating sequences from 20K to 100K tokens.</figcaption>
 </figure>
-
 
 
 - Best Performance on GSM8K, MATH-500, and AIME2024.
