@@ -119,7 +119,7 @@ The LatentSeek algorithm is described in Algorithm 1. This algorithm iteratively
     <div class="container is-max-desktop" markdown="1"> 
 <h2 style="font-size: 2em; font-weight: bold;">Experiments</h2>
 <br/>
-<h2 style="font-size: 1.5em; font-weight: bold;">Results</h2>
+<h2 style="font-size: 1.5em; font-weight: bold;">Settings</h2>
 <h2 style="font-size: 1em; font-weight: bold;">Reward Models:</h2>
 <ol>
   <li>Self: self-reward</li>
