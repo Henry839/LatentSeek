@@ -157,5 +157,6 @@ The LatentSeek algorithm is described in Algorithm 1. This algorithm iteratively
 <h2 style="font-size: 2em; font-weight: bold;">BibTex</h2>
 
 ```bibtex
+TBA
 
 ```
