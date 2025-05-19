@@ -60,8 +60,7 @@ code: https://github.com/bigai-nlco/LatentSeek
 
 <figure class="image" style="display: flex; justify-content: center; align-items: center; flex-direction: column;" id="table1">
   <img src="{{ 'LatentSeek/assets/img/LatentSeek.jpg' | relative_url }}" style="width: 100%; max-width: 1000px; height: auto"/>
-  <figcaption><span class="dnerf">Overview of LatentSeek.</span>LatentSeek is a novel framework that enhances LLM reasoning through **Test-Time Instance-level Adaptation (TTIA)** within the model's **latent space**. Specifically, LatentSeek leverages policy gradient to iteratively update latent representations, guided by self-generated reward signals. 
-.</figcaption>
+  <figcaption><span class="dnerf">Overview of LatentSeek.</span> LatentSeek is a novel framework that enhances LLM reasoning through <b>Test Time Instance-level Adaptation (TTIA)</b> within the model's <b>latent space</b>. Specifically, LatentSeek leverages policy gradient to iteratively update latent representations, guided by self-generated reward signals.</figcaption>
 </figure>
 
 
