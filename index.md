@@ -119,32 +119,18 @@ The LatentSeek algorithm is described in Algorithm 1. This algorithm iteratively
     <div class="container is-max-desktop" markdown="1"> 
 <h2 style="font-size: 2em; font-weight: bold;">Experiments</h2>
 <br/>
-<h2 style="font-size: 1.5em; font-weight: bold;">Settings</h2>
-<h2 style="font-size: 1em; font-weight: bold;">Reward Models:</h2>
-<ol>
-  <li>Self: self-reward</li>
-  <li>Perfect Sparse Reward Model (PSRM): A reward value of 0 is assigned exclusively when the generated final answer exactly matches the ground truth. In all other cases, a reward of -1 is given.</li>
-</ol>
-<br/>
-
-<h2 style="font-size: 1em; font-weight: bold;">Prompts:</h2>
-<ol>
-  <li>Prompt 1: wrap the answer with \boxed{}</li>
-  <li>Prompt 2: format the answer in json</li>
-</ol>
-<br/>
 
 <h2 style="font-size: 1.5em; font-weight: bold;">Results</h2>
 
 <figure class="image" style="display: flex; justify-content: center; align-items: center; flex-direction: column;" id="table1">
   <img src="{{ 'LatentSeek/assets/img/table1.jpg' | relative_url }}" style="width: 100%; max-width: 1000px; height: auto"/>
-  <figcaption><span class="dnerf">Table 1.</span> Accuracy Score (%) on GSM8K, MATH-500 and AIME2024.</figcaption>
+  <figcaption><span class="dnerf">Table 1.</span> Accuracy Score (%) on GSM8K, MATH-500 and AIME2024. Self: self-reward. Perfect Sparse Reward Model (PSRM): A reward value of 0 is assigned exclusively when the generated final answer exactly matches the ground truth. In all other cases, a reward of -1 is given.</figcaption>
 </figure>
 <br/>
 
 <figure class="image" style="display: flex; justify-content: center; align-items: center; flex-direction: column;" id="table1">
   <img src="{{ 'LatentSeek/assets/img/table2.jpg' | relative_url }}" style="width: 100%; max-width: 1000px; height: auto"/>
-  <figcaption><span class="dnerf">Table 2.</span> Accuracy score (%) compared with more baseline methods on GSM8K and MATH-500 datasets with Llama3.1-8B as backbone.</figcaption>
+  <figcaption><span class="dnerf">Table 2.</span> Accuracy score (%) compared with more baseline methods on GSM8K and MATH-500 datasets with Llama3.1-8B as backbone. Self: self-reward. Perfect Sparse Reward Model (PSRM): A reward value of 0 is assigned exclusively when the generated final answer exactly matches the ground truth. In all other cases, a reward of -1 is given.</figcaption>
 </figure>
 
 <br/>
