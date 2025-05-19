@@ -111,10 +111,12 @@ where $$t$$ denotes the position of the latent representation.
 
 The LatentSeek algorithm is described in Algorithm 1. This algorithm iteratively refines the latent representations based on the rewards of generated reasoning paths, effectively performing a guided search through the reasoning space specific to the given problem instance.  After each refinement step, the latent representations are decoded into tokens to calculate a reward signal. This signal is then employed to direct the search process in the subsequent iteration. Along with the reward signal, the final output $$\tilde{\mathbf{x}}$$ is also explicitly provided. The process runs for a small number of iterations (typically 2-10), stopping early if the reward exceeds a threshold.
 
-<br/>
-<br/>
+</div>
+</section>
 
-<h4 style="font-size: 2em; font-weight: bold;">Empirical Results</h4>
+<section class="section">
+    <div class="container is-max-desktop" markdown="1"> 
+<h2 style="font-size: 2em; font-weight: bold;">Empirical Results</h2>
 <br/>
 
 **Reward Models:**
