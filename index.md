@@ -156,7 +156,7 @@ The LatentSeek algorithm is described in Algorithm 1. This algorithm iteratively
   <li><b>Superior Performance on Complex Problems:</b> As shown in Table 1, our approach consistently outperforms all baselines, achieving an average improvement of 4.73% points over CoT across all model families and prompt configurations.</li>
   <li><b>Generalizable across backbones:</b> LatentSeek demonstrates superior performance across multiple model families. Also, in terms of model scales, our method consistently outperforms all baseline models across diverse datasets and prompt types</li>
   <li><b>Generalizable across prompts:</b> The Qwen2.5 series was explicitly trained using Prompt 1; nevertheless, our methods still achieve notable performance gains.</li>
-  <li><b>The large potential of \model, even when guided by sparse reward:</b> when using PSRM, LatentSeek achieves an average improvement of 19.12% score over the CoT method and surpasses the self-reward version by an average of 12.57% score.</li>
+  <li><b>The large potential of LatentSeek, even when guided by sparse reward:</b> when using PSRM, LatentSeek achieves an average improvement of 19.12% score over the CoT method and surpasses the self-reward version by an average of 12.57% score.</li>
 </ol>
 
 <br/>
