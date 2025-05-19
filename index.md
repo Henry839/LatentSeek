@@ -65,15 +65,17 @@ code: https://github.com/bigai-nlco/LatentSeek
 
 LatentSeek is a novel framework that enhances LLM reasoning through **Test-Time Instance-level Adaptation (TTIA)** within the model's **latent space**. Specifically, LatentSeek leverages policy gradient to iteratively update latent representations, guided by self-generated reward signals. 
 
+
 ## TTIA in Latent Space
 
-Given a reasoning problem instance $\mathbf{c}$ as a context prompt, a pre-trained auto-regressive language model $\pi$, a reasoning token sequence $\mathbf{x} = (x_1, x_2, \ldots, x_T)$, and denote the corresponding sequence of latent representations of $\mathbf{x}$ as $\mathbf{z} = (z_1, z_2, z_3, \ldots, z_T)$, the objective is:
+
+Given a reasoning problem instance $\mathbf{c}$ as a context prompt, a pre-trained auto-regressive language model $\pi$, a reasoning token sequence $\mathbf{x} = (x\_1, x\_2, \ldots, x\_T)$, and denote the corresponding sequence of latent representations of $\mathbf{x}$ as $\mathbf{z} = (z\_1, z\_2, z\_3, \ldots, z\_T)$, the objective is:
 $$
 \mathbf{z}^* = \arg\max_{\mathbf{z}} \mathbb{E}_{\mathbf{x} \sim \pi(\mathbf{x}|\mathbf{z})}[R(\mathbf{x}, \mathbf{c})].
 $$
 **Independent Sampling**
 $$
-\pi(\mathbf{x}|\mathbf{z}) = \prod_{t = 1}^{T} \pi(x_t|z_t), 
+\pi(\mathbf{x}|\mathbf{z}) = \prod_{t = 1}^{T} \pi(x\_t|z\_t), 
 $$
 **Test-Time Optimization of Latent Representations**
 
@@ -89,7 +91,12 @@ where $t$ denotes the position of the latent representation.
 
 ## LatentSeek Algorithm
 
-![image-20250519142719249](assets/img/image-20250519142719249.png)
+<figure class="image" style="display: flex; justify-content: center; align-items: center; flex-direction: column;" id="table1">
+  <img src="{{ 'LatentSeek/assets/img/image-20250519142719249.png' | relative_url }}" style="width: 100%; max-width: 1000px; height: auto"/>
+  <figcaption><span class="dnerf">Table 1.</span> Experimental results for LLaMA2 and LLaMA3.1 under varying prefix lengths, generating sequences from 20K to 100K tokens.</figcaption>
+</figure>
+
+
 The LatentSeek algorithm is described in Algorithm 1. This algorithm iteratively refines the latent representations based on the rewards of generated reasoning paths, effectively performing a guided search through the reasoning space specific to the given problem instance.  After each refinement step, the latent representations are decoded into tokens to calculate a reward signal. This signal is then employed to direct the search process in the subsequent iteration. Along with the reward signal, the final output $\tilde{\mathbf{x}}$ is also explicitly provided. The process runs for a small number of iterations (typically 2-10), stopping early if the reward exceeds a threshold. 
 
 ## Empirical Results
@@ -101,11 +108,25 @@ The LatentSeek algorithm is described in Algorithm 1. This algorithm iteratively
 
 <h5 align="center">Accuracy on GSM8K, MATH-500, AIME2024 datasets.</h5>
 
-![table1](assets/img/table1.jpg)
+<figure class="image" style="display: flex; justify-content: center; align-items: center; flex-direction: column;" id="table1">
+  <img src="{{ 'assets/img/table1.jpg' | relative_url }}" style="width: 100%; max-width: 1000px; height: auto"/>
+  <figcaption><span class="dnerf">Table 1.</span> Experimental results for LLaMA2 and LLaMA3.1 under varying prefix lengths, generating sequences from 20K to 100K tokens.</figcaption>
+</figure>
+
 
 <h5 align="center">Accuracy on GSM8K, MATH-500, AIME2024 datasets.</h5>
 
-![table2](assets/img/table2.jpg)
+<figure class="image" style="display: flex; justify-content: center; align-items: center; flex-direction: column;" id="table1">
+  <img src="{{ 'LatentSeek/assets/img/table1.jpg' | relative_url }}" style="width: 100%; max-width: 1000px; height: auto"/>
+  <figcaption><span class="dnerf">Table 1.</span> Experimental results for LLaMA2 and LLaMA3.1 under varying prefix lengths, generating sequences from 20K to 100K tokens.</figcaption>
+</figure>
+
+<figure class="image" style="display: flex; justify-content: center; align-items: center; flex-direction: column;" id="table1">
+  <img src="{{ 'LatentSeek/assets/img/table2.jpg' | relative_url }}" style="width: 100%; max-width: 1000px; height: auto"/>
+  <figcaption><span class="dnerf">Table 1.</span> Experimental results for LLaMA2 and LLaMA3.1 under varying prefix lengths, generating sequences from 20K to 100K tokens.</figcaption>
+</figure>
+
+
 
 * Best Performance on GSM8K, MATH-500, and AIME2024.
 * Be able to generalize across backbones.
@@ -114,7 +135,11 @@ The LatentSeek algorithm is described in Algorithm 1. This algorithm iteratively
 
 **Test-Time Scaling**
 
-![scaling](assets/img/scaling.jpg)
+<figure class="image" style="display: flex; justify-content: center; align-items: center; flex-direction: column;" id="table1">
+  <img src="{{ 'LatentSeek/assets/img/scaling.jpg' | relative_url }}" style="width: 100%; max-width: 1000px; height: auto"/>
+  <figcaption><span class="dnerf">Table 1.</span> Experimental results for LLaMA2 and LLaMA3.1 under varying prefix lengths, generating sequences from 20K to 100K tokens.</figcaption>
+</figure>
+
 
 * Blue: self-reward; Orange: PSRM 
 
