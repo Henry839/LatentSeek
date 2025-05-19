@@ -63,8 +63,8 @@ code: https://github.com/bigai-nlco/LatentSeek
   <figcaption><span class="dnerf">Table 1.</span> Experimental results for LLaMA2 and LLaMA3.1 under varying prefix lengths, generating sequences from 20K to 100K tokens.</figcaption>
 </figure>
 
-LatentSeek is a novel framework that enhances LLM reasoning through **Test-Time Instance-level Adaptation (TTIA)** within the model's **latent space**. Specifically, LatentSeek leverages policy gradient to iteratively update latent representations, guided by self-generated reward signals. 
 
+LatentSeek is a novel framework that enhances LLM reasoning through **Test-Time Instance-level Adaptation (TTIA)** within the model's **latent space**. Specifically, LatentSeek leverages policy gradient to iteratively update latent representations, guided by self-generated reward signals. 
 
 
 
@@ -105,9 +105,8 @@ The LatentSeek algorithm is described in Algorithm 1. This algorithm iteratively
 
 **Reward Models: **
 
-- Self: self-reward
-
-- Perfect Sparse Reward Model (PSRM): A reward value of 0 is assigned exclusively when the generated final answer exactly matches the ground truth. In all other cases, a reward of $$-1$$ is given.
+1. Self: self-reward
+2. Perfect Sparse Reward Model (PSRM): A reward value of 0 is assigned exclusively when the generated final answer exactly matches the ground truth. In all other cases, a reward of $$-1$$ is given.
 
 <h5 align="center">Accuracy on GSM8K, MATH-500, AIME2024 datasets.</h5>
 
@@ -130,10 +129,10 @@ The LatentSeek algorithm is described in Algorithm 1. This algorithm iteratively
 </figure>
 
 
-- Best Performance on GSM8K, MATH-500, and AIME2024.
-- Be able to generalize across backbones.
-- Be able to generalize across prompts.
-- Smaller models have acquired substantial knowledge but may lack effective mechanisms to elicit them.
+1. Best Performance on GSM8K, MATH-500, and AIME2024.
+2. Be able to generalize across backbones.
+3. Be able to generalize across prompts.
+4. Smaller models have acquired substantial knowledge but may lack effective mechanisms to elicit them.
 
 **Test-Time Scaling**
 
