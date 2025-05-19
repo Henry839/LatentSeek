@@ -66,13 +66,11 @@ code: https://github.com/bigai-nlco/LatentSeek
 </figure>
 </div>
 </div>
-<br/>
 <section class="section">
     <div class="container is-max-desktop" markdown="1"> 
 LatentSeek is a novel framework that enhances LLM reasoning through <b>Test Time Instance-level Adaptation (TTIA)</b> within the model's <b>latent space</b>. The latent representations are optimized during the test time using the policy gradient method, to maximize the expected reward. These optimized representations are subsequently decoded into token sequences, which are utilized to compute a new reward, which are then used to guide the next iteration.
     </div>
 </section>
-<br/>
 <br/>
 
 <section class="section">
