@@ -183,7 +183,10 @@ The LatentSeek algorithm is described in Algorithm 1. This algorithm iteratively
   <img src="{{ 'LatentSeek/assets/img/extreme_scaling.png' | relative_url }}" style="width: 100%; max-width: 1000px; height: auto"/>
   <figcaption><span class="dnerf">Figure 3.</span> Performance of Extreme Scaling on MATH-500 \cite{hendrycksmath2021} and AIME2024. Setting the maximum update iteration to 256. K: average number of outputs or iterations.</figcaption>
 </figure>
-1. The latent space represents a more **efficient option** for test-time scaling compared to the explicit space
+<br/>
+<ol>
+  <li>The latent space represents a more **efficient option** for test-time scaling compared to the explicit space.</li>
+</ol>
 
 </div>
 </section>
