@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: TokenSwift
+title: LatentSeek
 email: nlp@bigai.ai
 description: >- # this means to ignore newlines until "baseurl:"
   arXiv | From Hours to Minutes: Lossless Acceleration of Ultra Long Sequence Generation up to 100K Tokens
