@@ -97,11 +97,11 @@ where $$t$$ denotes the position of the latent representation.
 <h4 style="font-size: 2em; font-weight: bold;">LatentSeek Algorithm</h4>
 
 
-
-<figure class="image" id="framework">
-  <img src="{{ 'LatentSeek/assets/img/image-20250519142719249.png' | relative_url }}" style="width: 100%; max-width: 1000px; height: auto"/>
-    <figcaption><span class="dnerf">Algorithm 1.</span> The LatentSeek Algorithm.</figcaption>
+<figure class="image" style="display: flex; justify-content: center; align-items: center; flex-direction: column;" id="table1">
+<img src="{{ 'LatentSeek/assets/img/image-20250519142719249.png' | relative_url }}" style="width: 100%; max-width: 1000px; height: auto"/>
+<figcaption><span class="dnerf">Algorithm 1.</span> The LatentSeek Algorithm.</figcaption>
 </figure>
+
 
 
 The LatentSeek algorithm is described in Algorithm 1. This algorithm iteratively refines the latent representations based on the rewards of generated reasoning paths, effectively performing a guided search through the reasoning space specific to the given problem instance.  After each refinement step, the latent representations are decoded into tokens to calculate a reward signal. This signal is then employed to direct the search process in the subsequent iteration. Along with the reward signal, the final output $$\tilde{\mathbf{x}}$$ is also explicitly provided. The process runs for a small number of iterations (typically 2-10), stopping early if the reward exceeds a threshold.
