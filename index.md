@@ -66,11 +66,15 @@ code: https://github.com/bigai-nlco/LatentSeek
 </figure>
 </div>
 </div>
-</br>
+<br/>
 
 LatentSeek is a novel framework that enhances LLM reasoning through <b>Test Time Instance-level Adaptation (TTIA)</b> within the model's <b>latent space</b>. The latent representations are optimized during the test time using the policy gradient method, to maximize the expected reward. These optimized representations are subsequently decoded into token sequences, which are utilized to compute a new reward, which are then used to guide the next iteration.
 
+<br/>
+<br/>
+
 <h2 style="font-size: 2em; font-weight: bold;">TTIA in Latent Space</h2>
+<br/>
 
 Given a reasoning problem instance $$\mathbf{c}$$ as a context prompt, a pre-trained auto-regressive language model $$\pi$$, a reasoning token sequence $$\mathbf{x} = (x\_1, x\_2, \ldots, x\_T)$$, and denote the corresponding sequence of latent representations of $$\mathbf{x}$$ as $$\mathbf{z} = (z\_1, z\_2, z\_3, \ldots, z\_T)$$, the objective is:
 
@@ -93,26 +97,30 @@ where $$t$$ denotes the position of the latent representation.
 <h4 style="font-size: 2em; font-weight: bold;">LatentSeek Algorithm</h4>
 
 
-<div class="container is-max-desktop">
-<div class="hero-body">
+
 <figure class="image" id="framework">
   <img src="{{ 'LatentSeek/assets/img/image-20250519142719249.png' | relative_url }}" style="width: 100%; max-width: 1000px; height: auto"/>
     <figcaption><span class="dnerf">Algorithm 1.</span> The LatentSeek Algorithm.</figcaption>
 </figure>
-</div>
-</div>
 
-The LatentSeek algorithm is described in Algorithm 1. This algorithm iteratively refines the latent representations based on the rewards of generated reasoning paths, effectively performing a guided search through the reasoning space specific to the given problem instance.  After each refinement step, the latent representations are decoded into tokens to calculate a reward signal. This signal is then employed to direct the search process in the subsequent iteration. Along with the reward signal, the final output $\tilde{\mathbf{x}}$ is also explicitly provided. The process runs for a small number of iterations (typically 2-10), stopping early if the reward exceeds a threshold.
+
+The LatentSeek algorithm is described in Algorithm 1. This algorithm iteratively refines the latent representations based on the rewards of generated reasoning paths, effectively performing a guided search through the reasoning space specific to the given problem instance.  After each refinement step, the latent representations are decoded into tokens to calculate a reward signal. This signal is then employed to direct the search process in the subsequent iteration. Along with the reward signal, the final output $$\tilde{\mathbf{x}}$$ is also explicitly provided. The process runs for a small number of iterations (typically 2-10), stopping early if the reward exceeds a threshold.
+
+<br/>
+<br/>
 
 <h4 style="font-size: 2em; font-weight: bold;">Empirical Results</h4>
 
 **Reward Models:**
+<br/>
 
 <ul>
   <li>Self: self-reward</li>
-  <li>Perfect Sparse Reward Model (PSRM): A reward value of 0 is assigned exclusively when the generated final answer exactly matches the ground truth. In all other cases, a reward of $$-1$$ is given.</li>
+  <li>Perfect Sparse Reward Model (PSRM): A reward value of 0 is assigned exclusively when the generated final answer exactly matches the ground truth. In all other cases, a reward of -1 is given.</li>
 </ul>
 
+<br/>
+<br/>
 
 
 <figure class="image" style="display: flex; justify-content: center; align-items: center; flex-direction: column;" id="table1">
@@ -125,12 +133,17 @@ The LatentSeek algorithm is described in Algorithm 1. This algorithm iteratively
   <figcaption><span class="dnerf">Table 2.</span> Accuracy score (%) compared with more baseline methods on GSM8K and MATH-500 datasets with Llama3.1-8B as backbone.</figcaption>
 </figure>
 
-<ul>
+<br/>
+
+<ol>
   <li>Best Performance on GSM8K, MATH-500, and AIME2024.</li>
   <li>Be able to generalize across backbones.</li>
   <li>Be able to generalize across prompts.</li>
-  <li>Smaller models have acquired substantial knowledge but may lack effective mechanisms to elicit them.</li>
-</ul>
+  <li>PSRM performance demonstrates the strong potential of this method.</li>
+</ol>
+
+<br/>
+<br/>
 
 **Test-Time Scaling**
 
