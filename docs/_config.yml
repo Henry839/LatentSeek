@@ -22,7 +22,7 @@ title: LatentSeek
 email: nlp@bigai.ai
 description: >- # this means to ignore newlines until "baseurl:"
   arXiv | Seek in the Dark: Reasoning via Test-Time Instance-Level Policy Gradient in Latent Space
-baseurl: "" # the subpath of your site, e.g. /blog
+baseurl: "/docs" # the subpath of your site, e.g. /blog
 url: "https://henry839.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 # related_research:
 #   - title: "VideoHallucer"
