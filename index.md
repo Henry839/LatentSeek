@@ -149,7 +149,7 @@ The LatentSeek algorithm is described in Algorithm 1. This algorithm iteratively
 
 <br/>
 
-**Does the method perform well? Is Latent Space Powerful Enough? Can it generalize to different models' latent space?**
+**Work or Not: Is Latent Space Powerful Enough?**
 <br/>
 <ol>
   <li><b>Best Performance on GSM8K, MATH-500:</b> As demonstrated in Table 2, our method outperforms all baseline approaches across all GSM8K, and MATH-500 datasets.</li>
