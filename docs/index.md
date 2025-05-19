@@ -10,6 +10,7 @@ authors:
       url: https://github.com/Henry839
     - name: Chenxi Li
       tag: <i class="fas fa-star" style='font-size:11px'></i> 3
+      url: https://wutong4012.github.io/
     - name: Tong Wu
       tag: 2
       url: https://wutong4012.github.io/
