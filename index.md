@@ -155,15 +155,6 @@ The LatentSeek algorithm is described in Algorithm 1. This algorithm iteratively
   <figcaption><span class="dnerf">Figure 2.</span> Test-Time Scaling. Performance with respect to the number of iterations. Blue: self-reward. Orange: PSRM.</figcaption>
 </figure>
 <br/>
-<br/>
-
-**A dream of AGI: Can it be a method for Test-Time Scaling?**
-<br/>
-<ol>
-  <li>Test-time scaling can be achieved **without necessitating a dense reward function** in our setting.</li>
-  <li>Searching through the latent space offers a **promising new direction** for test-time scaling.</li>
-</ol>
-<br/>
 
 <figure class="image" style="display: flex; justify-content: center; align-items: center; flex-direction: column;" id="table1">
   <img src="{{ 'LatentSeek/assets/img/extreme_scaling.png' | relative_url }}" style="width: 100%; max-width: 1000px; height: auto"/>
@@ -171,7 +162,15 @@ The LatentSeek algorithm is described in Algorithm 1. This algorithm iteratively
 </figure>
 <br/>
 
-The latent space represents a more <b>efficient option</b> for test-time scaling compared to the explicit space.
+**A dream of AGI: Can it be a method for Test-Time Scaling?**
+<br/>
+<ol>
+  <li>Test-time scaling can be achieved <b>without necessitating a dense reward function</b> in our setting. (Figure 2)</li>
+  <li>Searching through the latent space offers a <b>promising new direction** for test-time scaling</b>. (Figure 2)</li>
+  <li>The latent space represents a more <b>efficient option</b> for test-time scaling compared to the explicit space. (Figure 3)</li>
+</ol>
+<br/>
+
 
 </div>
 </section>
