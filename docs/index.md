@@ -58,7 +58,7 @@ arxiv: https://arxiv.org/abs/2502.18890
 code: https://github.com/bigai-nlco/LatentSeek
 ---
 
-![LatentSeek](./assets/img/LatentSeek.jpg)
+![LatentSeek]({{ site.baseurl }}/assets/img/LatentSeek.jpg)
 
 LatentSeek is a novel framework that enhances LLM reasoning through **Test-Time Instance-level Adaptation (TTIA)** within the model's **latent space**. Specifically, LatentSeek leverages policy gradient to iteratively update latent representations, guided by self-generated reward signals. 
 
