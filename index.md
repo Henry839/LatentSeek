@@ -79,13 +79,12 @@ LatentSeek is a novel framework that enhances LLM reasoning through <b>Test Time
     <div class="container is-max-desktop" markdown="1"> 
 <h2 style="font-size: 2em; font-weight: bold;">TTIA in Latent Space</h2>
 <br/>
-
 Given a reasoning problem instance $$\mathbf{c}$$ as a context prompt, a pre-trained auto-regressive language model $$\pi$$, a reasoning token sequence $$\mathbf{x} = (x\_1, x\_2, \ldots, x\_T)$$, and denote the corresponding sequence of latent representations of $$\mathbf{x}$$ as $$\mathbf{z} = (z\_1, z\_2, z\_3, \ldots, z\_T)$$, the objective is:
 
 $$ \mathbf{z}^* = \arg\max_{\mathbf{z}} \mathbb{E}_{\mathbf{x} \sim \pi(\mathbf{x}|\mathbf{z})}[R(\mathbf{x}, \mathbf{c})]. $$
 
 
-<h4 style="font-size: 1em; font-weight: bold;">Test-Time Optimization of Latent Representations</h4>
+<h2 style="font-size: 1em; font-weight: bold;">Test-Time Optimization of Latent Representations</h2>
 
 Assuming the *independence of the latent representations*, the test-time optimization is:
 
@@ -111,8 +110,6 @@ where $$t$$ denotes the position of the latent representation.
 <figcaption><span class="dnerf">Algorithm 1.</span> The LatentSeek Algorithm.</figcaption>
 </figure>
 <br/>
-
-
 
 The LatentSeek algorithm is described in Algorithm 1. This algorithm iteratively refines the latent representations based on the rewards of generated reasoning paths, effectively performing a guided search through the reasoning space specific to the given problem instance.  After each refinement step, the latent representations are decoded into tokens to calculate a reward signal. This signal is then employed to direct the search process in the subsequent iteration. Along with the reward signal, the final output $$\tilde{\mathbf{x}}$$ is also explicitly provided. The process runs for a small number of iterations (typically 2-10), stopping early if the reward exceeds a threshold.
 
@@ -173,6 +170,11 @@ The LatentSeek algorithm is described in Algorithm 1. This algorithm iteratively
 <br/>
 <br/>
 
+<ol>
+  <li>Test-time scaling can be achieved without necessitating a dense reward function in our setting.</li>
+  <li>Searching through the latent space offers a promising new direction for test-time scaling.</li>
+</ol>
+<br/>
 </div>
 </section>
 
