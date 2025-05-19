@@ -68,7 +68,7 @@ code: https://github.com/bigai-nlco/LatentSeek
 </div>
 </br>
 
-LatentSeek is a novel framework that enhances LLM reasoning through <b>Test Time Instance-level Adaptation (TTIA)</b> within the model's <b>latent space</b>. It introduces updated instance-specific latent representations that steer the pre-trained model's reasoning process without modifying its parameters. These latent representations act as a planning or control mechanism that guides the model toward better reasoning paths for each specific problem instance. We optimize latent representations at test time using the policy gradient method to maximize reward. Specifically, for each reasoning problem, we update the token-wise latent representations using guidance from the reward function, treating them as independent variables. In each iteration, the updated latent representations are decoded into tokens, which serve as inputs for computing the reward. Importantly, the reward function operates in a self-rewarding manner, relying solely on the model’s internal capabilities without incorporating any external information. The process continues until the reward exceeds a predefined threshold or the maximum number of iterations is reached.
+LatentSeek is a novel framework that enhances LLM reasoning through <b>Test Time Instance-level Adaptation (TTIA)</b> within the model's <b>latent space</b>. The latent representations are optimized during the test time using the policy gradient method, to maximize the expected reward. These optimized representations are subsequently decoded into token sequences, which are utilized to compute a new reward, which are then used to guide the next iteration.
 
 <h2 style="font-size: 2em; font-weight: bold;">TTIA in Latent Space</h2>
 
@@ -108,9 +108,10 @@ The LatentSeek algorithm is described in Algorithm 1. This algorithm iteratively
 
 **Reward Models:**
 
-*Self: self-reward
-
-*Perfect Sparse Reward Model (PSRM): A reward value of 0 is assigned exclusively when the generated final answer exactly matches the ground truth. In all other cases, a reward of $$-1$$ is given.
+<ul>
+  <li>Self: self-reward</li>
+  <li>Perfect Sparse Reward Model (PSRM): A reward value of 0 is assigned exclusively when the generated final answer exactly matches the ground truth. In all other cases, a reward of $$-1$$ is given.</li>
+</ul>
 
 
 
@@ -124,21 +125,21 @@ The LatentSeek algorithm is described in Algorithm 1. This algorithm iteratively
   <figcaption><span class="dnerf">Table 2.</span> Accuracy score (%) compared with more baseline methods on GSM8K and MATH-500 datasets with Llama3.1-8B as backbone.</figcaption>
 </figure>
 
-
-*Best Performance on GSM8K, MATH-500, and AIME2024.
-*Be able to generalize across backbones.
-*Be able to generalize across prompts.
-*Smaller models have acquired substantial knowledge but may lack effective mechanisms to elicit them.
+<ul>
+  <li>Best Performance on GSM8K, MATH-500, and AIME2024.</li>
+  <li>Be able to generalize across backbones.</li>
+  <li>Be able to generalize across prompts.</li>
+  <li>Smaller models have acquired substantial knowledge but may lack effective mechanisms to elicit them.</li>
+</ul>
 
 **Test-Time Scaling**
 
 <figure class="image" style="display: flex; justify-content: center; align-items: center; flex-direction: column;" id="table1">
   <img src="{{ 'LatentSeek/assets/img/scaling.jpg' | relative_url }}" style="width: 100%; max-width: 1000px; height: auto"/>
-  <figcaption><span class="dnerf">Table 1.</span> Experimental results for LLaMA2 and LLaMA3.1 under varying prefix lengths, generating sequences from 20K to 100K tokens.</figcaption>
+  <figcaption><span class="dnerf">Figure 2.</span> Test-Time Scaling. Performance with respect to the number of iterations. Blue: self-reward. Orange: PSRM.</figcaption>
 </figure>
 
 
-* Blue: self-reward; Orange: PSRM 
 
 <h2 style="font-size: 2em; font-weight: bold;">BibTex</h2>
 
