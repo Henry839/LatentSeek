@@ -69,14 +69,14 @@ LatentSeek is a novel framework that enhances LLM reasoning through **Test-Time 
 
 
 <h2 style="font-size: 2em; font-weight: bold;">TTIA in Latent Space</h2>
+
 Given a reasoning problem instance $\mathbf{c}$ as a context prompt, a pre-trained auto-regressive language model $\pi$, a reasoning token sequence $\mathbf{x} = (x\_1, x\_2, \ldots, x\_T)$, and denote the corresponding sequence of latent representations of $\mathbf{x}$ as $\mathbf{z} = (z\_1, z\_2, z\_3, \ldots, z\_T)$, the objective is:
-$$
-\mathbf{z}^* = \arg\max_{\mathbf{z}} \mathbb{E}_{\mathbf{x} \sim \pi(\mathbf{x}|\mathbf{z})}[R(\mathbf{x}, \mathbf{c})].
-$$
+
+$$ \mathbf{z}^* = \arg\max_{\mathbf{z}} \mathbb{E}_{\mathbf{x} \sim \pi(\mathbf{x}|\mathbf{z})}[R(\mathbf{x}, \mathbf{c})]. $$
+
 **Independent Sampling**
-$$
-\pi(\mathbf{x}|\mathbf{z}) = \prod_{t = 1}^{T} \pi(x\_t|z\_t), 
-$$
+
+$$ \pi(\mathbf{x}|\mathbf{z}) = \prod_{t = 1}^{T} \pi(x\_t|z\_t), $$
 
 <h4 style="font-size: 2em; font-weight: bold;">Test-Time Optimization of Latent Representations</h4>
 
