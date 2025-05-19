@@ -70,7 +70,7 @@ LatentSeek is a novel framework that enhances LLM reasoning through **Test-Time 
 
 <h2 style="font-size: 2em; font-weight: bold;">TTIA in Latent Space</h2>
 
-Given a reasoning problem instance $\mathbf{c}$ as a context prompt, a pre-trained auto-regressive language model $\pi$, a reasoning token sequence $\mathbf{x} = (x\_1, x\_2, \ldots, x\_T)$, and denote the corresponding sequence of latent representations of $\mathbf{x}$ as $\mathbf{z} = (z\_1, z\_2, z\_3, \ldots, z\_T)$, the objective is:
+Given a reasoning problem instance $ \mathbf{c} $ as a context prompt, a pre-trained auto-regressive language model $\pi$, a reasoning token sequence $\mathbf{x} = (x\_1, x\_2, \ldots, x\_T)$, and denote the corresponding sequence of latent representations of $\mathbf{x}$ as $\mathbf{z} = (z\_1, z\_2, z\_3, \ldots, z\_T)$, the objective is:
 
 $$ \mathbf{z}^* = \arg\max_{\mathbf{z}} \mathbb{E}_{\mathbf{x} \sim \pi(\mathbf{x}|\mathbf{z})}[R(\mathbf{x}, \mathbf{c})]. $$
 
@@ -105,8 +105,8 @@ The LatentSeek algorithm is described in Algorithm 1. This algorithm iteratively
 
 **Reward Models: **
 
-* Self: self-reward
-* Perfect Sparse Reward Model (PSRM): A reward value of 0 is assigned exclusively when the generated final answer exactly matches the ground truth. In all other cases, a reward of $-1$ is given.
+- Self: self-reward
+- Perfect Sparse Reward Model (PSRM): A reward value of 0 is assigned exclusively when the generated final answer exactly matches the ground truth. In all other cases, a reward of $-1$ is given.
 
 <h5 align="center">Accuracy on GSM8K, MATH-500, AIME2024 datasets.</h5>
 
@@ -130,10 +130,10 @@ The LatentSeek algorithm is described in Algorithm 1. This algorithm iteratively
 
 
 
-* Best Performance on GSM8K, MATH-500, and AIME2024.
-* Be able to generalize across backbones.
-* Be able to generalize across prompts.
-* Smaller models have acquired substantial knowledge but may lack effective mechanisms to elicit them.
+- Best Performance on GSM8K, MATH-500, and AIME2024.
+- Be able to generalize across backbones.
+- Be able to generalize across prompts.
+- Smaller models have acquired substantial knowledge but may lack effective mechanisms to elicit them.
 
 **Test-Time Scaling**
 
