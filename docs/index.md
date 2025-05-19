@@ -1,5 +1,4 @@
 ---
-​---
 layout: default
 
 title: > 
@@ -58,7 +57,6 @@ misc: >
 
 arxiv: https://arxiv.org/abs/2502.18890
 code: https://github.com/bigai-nlco/LatentSeek
-​---
 ---
 
 ![LatentSeek](/docs/assets/img/LatentSeek.jpg)
