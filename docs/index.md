@@ -87,7 +87,7 @@ where $t$ denotes the position of the latent representation.
 
 ## LatentSeek Algorithm
 
-![image-20250519142719249](LatentSeek/docs/assets/img/image-20250519142719249.png)
+![image-20250519142719249](assets/img/image-20250519142719249.png)
 The LatentSeek algorithm is described in Algorithm 1. This algorithm iteratively refines the latent representations based on the rewards of generated reasoning paths, effectively performing a guided search through the reasoning space specific to the given problem instance.  After each refinement step, the latent representations are decoded into tokens to calculate a reward signal. This signal is then employed to direct the search process in the subsequent iteration. Along with the reward signal, the final output $\tilde{\mathbf{x}}$ is also explicitly provided. The process runs for a small number of iterations (typically 2-10), stopping early if the reward exceeds a threshold. 
 
 ## Empirical Results
@@ -99,11 +99,11 @@ The LatentSeek algorithm is described in Algorithm 1. This algorithm iteratively
 
 <h5 align="center">Accuracy on GSM8K, MATH-500, AIME2024 datasets.</h5>
 
-![table1](/LatentSeek/docs/assets/img/table1.jpg)
+![table1](assets/img/table1.jpg)
 
 <h5 align="center">Accuracy on GSM8K, MATH-500, AIME2024 datasets.</h5>
 
-![table2](/LatentSeek/docs/assets/img/table2.jpg)
+![table2](assets/img/table2.jpg)
 
 * Best Performance on GSM8K, MATH-500, and AIME2024.
 * Be able to generalize across backbones.
@@ -112,7 +112,7 @@ The LatentSeek algorithm is described in Algorithm 1. This algorithm iteratively
 
 **Test-Time Scaling**
 
-![scaling](/LatentSeek/docs/assets/img/scaling.jpg)
+![scaling](assets/img/scaling.jpg)
 
 * Blue: self-reward; Orange: PSRM 
 
