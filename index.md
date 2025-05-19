@@ -83,9 +83,9 @@ The introduced framework, named LatentSeek, enhances LLM reasoning through <b>Te
 <br/>
 Given a reasoning problem instance $$\mathbf{c}$$ as a context prompt, a pre-trained auto-regressive language model $$\pi$$, a reasoning token sequence $$\mathbf{x} = (x\_1, x\_2, \ldots, x\_T)$$, and denote the corresponding sequence of latent representations of $$\mathbf{x}$$ as $$\mathbf{z} = (z\_1, z\_2, z\_3, \ldots, z\_T)$$, the objective is:
 
-$$ \mathbf{z}^* = \arg\max_{\mathbf{z}} \mathbb{E}_{\mathbf{x} \sim \pi(\mathbf{x}|\mathbf{z})}[R(\mathbf{x}, \mathbf{c})]. $$
+$$ \mathbf{z}^* = \arg\max_{\mathbf{z}} \mathbb{E}_{\mathbf{x} \sim \pi(\mathbf{x}|\mathbf{z})}[R(\mathbf{x}, \mathbf{c})]， $$
 
-
+where $$R(\mathbf{x}, \mathbf{c})$$ is the reward function.
 <h2 style="font-size: 1em; font-weight: bold;">Test-Time Optimization of Latent Representations</h2>
 
 Assuming the *independence of the latent representations*, the test-time optimization is:
