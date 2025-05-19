@@ -93,6 +93,8 @@ $$ [\nabla_{\mathbf{z}}\mathcal{J}(\mathbf{z})]_t =\mathbb{E}_{\mathbf{x}\sim\pi
 
 where $$t$$ denotes the position of the latent representation.
 
+<br/>
+<br/>
 
 <h4 style="font-size: 2em; font-weight: bold;">LatentSeek Algorithm</h4>
 
@@ -101,6 +103,7 @@ where $$t$$ denotes the position of the latent representation.
 <img src="{{ 'LatentSeek/assets/img/image-20250519142719249.png' | relative_url }}" style="width: 100%; max-width: 1000px; height: auto"/>
 <figcaption><span class="dnerf">Algorithm 1.</span> The LatentSeek Algorithm.</figcaption>
 </figure>
+<br/>
 
 
 
@@ -110,16 +113,14 @@ The LatentSeek algorithm is described in Algorithm 1. This algorithm iteratively
 <br/>
 
 <h4 style="font-size: 2em; font-weight: bold;">Empirical Results</h4>
-
-**Reward Models:**
 <br/>
 
+**Reward Models:**
 <ul>
   <li>Self: self-reward</li>
   <li>Perfect Sparse Reward Model (PSRM): A reward value of 0 is assigned exclusively when the generated final answer exactly matches the ground truth. In all other cases, a reward of -1 is given.</li>
 </ul>
 
-<br/>
 <br/>
 
 
@@ -127,6 +128,7 @@ The LatentSeek algorithm is described in Algorithm 1. This algorithm iteratively
   <img src="{{ 'LatentSeek/assets/img/table1.jpg' | relative_url }}" style="width: 100%; max-width: 1000px; height: auto"/>
   <figcaption><span class="dnerf">Table 1.</span> Accuracy Score (%) on GSM8K, MATH-500 and AIME2024.</figcaption>
 </figure>
+<br/>
 
 <figure class="image" style="display: flex; justify-content: center; align-items: center; flex-direction: column;" id="table1">
   <img src="{{ 'LatentSeek/assets/img/table2.jpg' | relative_url }}" style="width: 100%; max-width: 1000px; height: auto"/>
@@ -146,11 +148,14 @@ The LatentSeek algorithm is described in Algorithm 1. This algorithm iteratively
 <br/>
 
 **Test-Time Scaling**
+<br/>
 
 <figure class="image" style="display: flex; justify-content: center; align-items: center; flex-direction: column;" id="table1">
   <img src="{{ 'LatentSeek/assets/img/scaling.jpg' | relative_url }}" style="width: 100%; max-width: 1000px; height: auto"/>
   <figcaption><span class="dnerf">Figure 2.</span> Test-Time Scaling. Performance with respect to the number of iterations. Blue: self-reward. Orange: PSRM.</figcaption>
 </figure>
+<br/>
+<br/>
 
 
 
