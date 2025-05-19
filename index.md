@@ -119,7 +119,7 @@ The LatentSeek algorithm is described in Algorithm 1. This algorithm iteratively
     <div class="container is-max-desktop" markdown="1"> 
 <h2 style="font-size: 2em; font-weight: bold;">Experiments</h2>
 <br/>
-**Settings**
+<h2 style="font-size: 1.5em; font-weight: bold;">Results</h2>
 <h2 style="font-size: 1em; font-weight: bold;">Reward Models:</h2>
 <ol>
   <li>Self: self-reward</li>
@@ -134,7 +134,7 @@ The LatentSeek algorithm is described in Algorithm 1. This algorithm iteratively
 </ol>
 <br/>
 
-<h2 style="font-size: 1em; font-weight: bold;">Results</h2>
+<h2 style="font-size: 1.5em; font-weight: bold;">Results</h2>
 
 <figure class="image" style="display: flex; justify-content: center; align-items: center; flex-direction: column;" id="table1">
   <img src="{{ 'LatentSeek/assets/img/table1.jpg' | relative_url }}" style="width: 100%; max-width: 1000px; height: auto"/>
@@ -150,7 +150,7 @@ The LatentSeek algorithm is described in Algorithm 1. This algorithm iteratively
 <br/>
 
 **Does the method perform well? Is Latent Space Powerful Enough? Can it generalize to different models' latent space?**
-
+<br/>
 <ol>
   <li><b>Best Performance on GSM8K, MATH-500:</b> As demonstrated in Table 2, our method outperforms all baseline approaches across all GSM8K, and MATH-500 datasets.</li>
   <li><b>Superior Performance on Complex Problems:</b> As shown in Table 1, our approach consistently outperforms all baselines, achieving an average improvement of 4.73% points over CoT across all model families and prompt configurations.</li>
@@ -162,8 +162,7 @@ The LatentSeek algorithm is described in Algorithm 1. This algorithm iteratively
 <br/>
 <br/>
 
-**A dream of AGI: Can it be a method for Test-Time Scaling?**
-<br/>
+
 
 <figure class="image" style="display: flex; justify-content: center; align-items: center; flex-direction: column;" id="table1">
   <img src="{{ 'LatentSeek/assets/img/scaling.jpg' | relative_url }}" style="width: 100%; max-width: 1000px; height: auto"/>
@@ -172,6 +171,8 @@ The LatentSeek algorithm is described in Algorithm 1. This algorithm iteratively
 <br/>
 <br/>
 
+**A dream of AGI: Can it be a method for Test-Time Scaling?**
+<br/>
 <ol>
   <li>Test-time scaling can be achieved **without necessitating a dense reward function** in our setting.</li>
   <li>Searching through the latent space offers a **promising new direction** for test-time scaling.</li>
