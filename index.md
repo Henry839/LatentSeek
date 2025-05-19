@@ -60,11 +60,10 @@ code: https://github.com/bigai-nlco/LatentSeek
 
 <figure class="image" style="display: flex; justify-content: center; align-items: center; flex-direction: column;" id="table1">
   <img src="{{ 'LatentSeek/assets/img/LatentSeek.jpg' | relative_url }}" style="width: 100%; max-width: 1000px; height: auto"/>
-  <figcaption><span class="dnerf">Table 1.</span> Experimental results for LLaMA2 and LLaMA3.1 under varying prefix lengths, generating sequences from 20K to 100K tokens.</figcaption>
+  <figcaption><span class="dnerf">Overview of LatentSeek.</span>LatentSeek is a novel framework that enhances LLM reasoning through **Test-Time Instance-level Adaptation (TTIA)** within the model's **latent space**. Specifically, LatentSeek leverages policy gradient to iteratively update latent representations, guided by self-generated reward signals. 
+.</figcaption>
 </figure>
 
-<br/>
-LatentSeek is a novel framework that enhances LLM reasoning through **Test-Time Instance-level Adaptation (TTIA)** within the model's **latent space**. Specifically, LatentSeek leverages policy gradient to iteratively update latent representations, guided by self-generated reward signals. 
 
 
 
@@ -74,11 +73,8 @@ Given a reasoning problem instance $$\mathbf{c}$$ as a context prompt, a pre-tra
 
 $$ \mathbf{z}^* = \arg\max_{\mathbf{z}} \mathbb{E}_{\mathbf{x} \sim \pi(\mathbf{x}|\mathbf{z})}[R(\mathbf{x}, \mathbf{c})]. $$
 
-**Independent Sampling**
 
-$$ \pi(\mathbf{x}|\mathbf{z}) = \prod_{t = 1}^{T} \pi(x\_t|z\_t), $$
-
-<h4 style="font-size: 2em; font-weight: bold;">Test-Time Optimization of Latent Representations</h4>
+<h4 style="font-size: 1em; font-weight: bold;">Test-Time Optimization of Latent Representations</h4>
 
 Assuming the *independence of the latent representations*, the test-time optimization is:
 
@@ -95,12 +91,11 @@ where $$t$$ denotes the position of the latent representation.
 
 <figure class="image" style="display: flex; justify-content: center; align-items: center; flex-direction: column;" id="table1">
   <img src="{{ 'LatentSeek/assets/img/image-20250519142719249.png' | relative_url }}" style="width: 100%; max-width: 1000px; height: auto"/>
-  <figcaption><span class="dnerf">Table 1.</span> Experimental results for LLaMA2 and LLaMA3.1 under varying prefix lengths, generating sequences from 20K to 100K tokens.</figcaption>
+  <figcaption><span class="dnerf">LatentSeek Algorithm.</span> This algorithm iteratively refines the latent representations based on the rewards of generated reasoning paths, effectively performing a guided search through the reasoning space specific to the given problem instance.  After each refinement step, the latent representations are decoded into tokens to calculate a reward signal. This signal is then employed to direct the search process in the subsequent iteration. Along with the reward signal, the final output $\tilde{\mathbf{x}}$ is also explicitly provided. The process runs for a small number of iterations (typically 2-10), stopping early if the reward exceeds a threshold. </figcaption>
 </figure>
 
 
-The LatentSeek algorithm is described in Algorithm 1. This algorithm iteratively refines the latent representations based on the rewards of generated reasoning paths, effectively performing a guided search through the reasoning space specific to the given problem instance.  After each refinement step, the latent representations are decoded into tokens to calculate a reward signal. This signal is then employed to direct the search process in the subsequent iteration. Along with the reward signal, the final output $\tilde{\mathbf{x}}$ is also explicitly provided. The process runs for a small number of iterations (typically 2-10), stopping early if the reward exceeds a threshold. 
-
+The LatentSeek algorithm is described in Algorithm 1. 
 <h4 style="font-size: 2em; font-weight: bold;">Empirical Results</h4>
 
 **Reward Models:**
