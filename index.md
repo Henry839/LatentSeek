@@ -166,7 +166,7 @@ The LatentSeek algorithm is described in Algorithm 1. This algorithm iteratively
 <br/>
 <ol>
   <li>Test-time scaling can be achieved <b>without necessitating a dense reward function</b> in our setting. (Figure 2)</li>
-  <li>Searching through the latent space offers a <b>promising new direction** for test-time scaling</b>. (Figure 2)</li>
+  <li>Searching through the latent space offers a <b>promising new direction</b> for test-time scaling. (Figure 2)</li>
   <li>The latent space represents a more <b>efficient option</b> for test-time scaling compared to the explicit space. (Figure 3)</li>
 </ol>
 <br/>
