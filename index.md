@@ -116,11 +116,17 @@ The LatentSeek algorithm is described in Algorithm 1. This algorithm iteratively
 <br/>
 
 **Reward Models:**
-<ul>
+<ol>
   <li>Self: self-reward</li>
   <li>Perfect Sparse Reward Model (PSRM): A reward value of 0 is assigned exclusively when the generated final answer exactly matches the ground truth. In all other cases, a reward of -1 is given.</li>
-</ul>
+</ol>
+<br/>
 
+**Prompts:**
+<ol>
+  <li>Prompt 1: wrap the answer with \boxed{}</li>
+  <li>Prompt 2: format the answer in json</li>
+</ol>
 <br/>
 
 
@@ -137,11 +143,14 @@ The LatentSeek algorithm is described in Algorithm 1. This algorithm iteratively
 
 <br/>
 
+**Analysis:**
+
 <ol>
-  <li>Best Performance on GSM8K, MATH-500, and AIME2024.</li>
-  <li>Be able to generalize across backbones.</li>
-  <li>Be able to generalize across prompts.</li>
-  <li>PSRM performance demonstrates the strong potential of this method.</li>
+  <li><b>Best Performance on GSM8K, MATH-500:</b> As demonstrated in Table 2, our method outperforms all baseline approaches across all GSM8K, and MATH-500 datasets.</li>
+  <li><b>Superior Performance on Complex Problems:</b> As shown in Table 1, our approach consistently outperforms all baselines, achieving an average improvement of 4.73% points over CoT across all model families and prompt configurations.</li>
+  <li><b>Generalizable across backbones:</b> LatentSeek demonstrates superior performance across multiple model families. Also, in terms of model scales, our method consistently outperforms all baseline models across diverse datasets and prompt types</li>
+  <li><b>Generalizable across prompts:</b> The Qwen2.5 series was explicitly trained using Prompt 1; nevertheless, our methods still achieve notable performance gains.</li>
+  <li><b>The large potential of \model, even when guided by sparse reward:</b> when using PSRM, LatentSeek achieves an average improvement of 19.12% score over the CoT method and surpasses the self-reward version by an average of 12.57% score.</li>
 </ol>
 
 <br/>
