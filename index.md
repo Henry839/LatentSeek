@@ -67,12 +67,16 @@ code: https://github.com/bigai-nlco/LatentSeek
 </div>
 </div>
 <br/>
-
+<section class="section">
+    <div class="container is-max-desktop" markdown="1"> 
 LatentSeek is a novel framework that enhances LLM reasoning through <b>Test Time Instance-level Adaptation (TTIA)</b> within the model's <b>latent space</b>. The latent representations are optimized during the test time using the policy gradient method, to maximize the expected reward. These optimized representations are subsequently decoded into token sequences, which are utilized to compute a new reward, which are then used to guide the next iteration.
-
+    </div>
+</section>
 <br/>
 <br/>
 
+<section class="section">
+    <div class="container is-max-desktop" markdown="1"> 
 <h2 style="font-size: 2em; font-weight: bold;">TTIA in Latent Space</h2>
 <br/>
 
@@ -92,10 +96,13 @@ and the gradient is calculated as follows:
 $$ [\nabla_{\mathbf{z}}\mathcal{J}(\mathbf{z})]_t =\mathbb{E}_{\mathbf{x}\sim\pi(\mathbf{x}|\mathbf{z})}\left[R(\mathbf{x},\mathbf{c})\nabla_{z_t} \log\pi(x_t|z_t)\right], $$
 
 where $$t$$ denotes the position of the latent representation.
-
 <br/>
 <br/>
+</div>
+</section>
 
+<section class="section">
+    <div class="container is-max-desktop" markdown="1"> 
 <h4 style="font-size: 2em; font-weight: bold;">LatentSeek Algorithm</h4>
 
 
@@ -166,7 +173,8 @@ The LatentSeek algorithm is described in Algorithm 1. This algorithm iteratively
 <br/>
 <br/>
 
-
+</div>
+</section>
 
 <h2 style="font-size: 2em; font-weight: bold;">BibTex</h2>
 
