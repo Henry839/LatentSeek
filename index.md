@@ -117,9 +117,9 @@ The LatentSeek algorithm is described in Algorithm 1. This algorithm iteratively
 
 <section class="section">
     <div class="container is-max-desktop" markdown="1"> 
-<h2 style="font-size: 2em; font-weight: bold;">Empirical Results</h2>
+<h2 style="font-size: 2em; font-weight: bold;">Experiments</h2>
 <br/>
-
+<h2 style="font-size: 1em; font-weight: bold;">Settings</h2>
 **Reward Models:**
 <ol>
   <li>Self: self-reward</li>
@@ -134,6 +134,7 @@ The LatentSeek algorithm is described in Algorithm 1. This algorithm iteratively
 </ol>
 <br/>
 
+<h2 style="font-size: 1em; font-weight: bold;">Results</h2>
 
 <figure class="image" style="display: flex; justify-content: center; align-items: center; flex-direction: column;" id="table1">
   <img src="{{ 'LatentSeek/assets/img/table1.jpg' | relative_url }}" style="width: 100%; max-width: 1000px; height: auto"/>
@@ -148,7 +149,7 @@ The LatentSeek algorithm is described in Algorithm 1. This algorithm iteratively
 
 <br/>
 
-**Analysis:**
+<h2 style="font-size: 1em; font-weight: bold;">Analysis</h2>
 
 <ol>
   <li><b>Best Performance on GSM8K, MATH-500:</b> As demonstrated in Table 2, our method outperforms all baseline approaches across all GSM8K, and MATH-500 datasets.</li>
@@ -161,7 +162,7 @@ The LatentSeek algorithm is described in Algorithm 1. This algorithm iteratively
 <br/>
 <br/>
 
-**Test-Time Scaling**
+<h2 style="font-size: 1em; font-weight: bold;">Test-Time Scaling</h2>
 <br/>
 
 <figure class="image" style="display: flex; justify-content: center; align-items: center; flex-direction: column;" id="table1">
