@@ -58,6 +58,8 @@ arxiv: https://arxiv.org/abs/2502.18890
 code: https://github.com/bigai-nlco/LatentSeek
 ---
 
+## TTIA in Latent Space
+
 <figure class="image" style="display: flex; justify-content: center; align-items: center; flex-direction: column;" id="table1">
   <img src="{{ 'LatentSeek/assets/img/LatentSeek.jpg' | relative_url }}" style="width: 100%; max-width: 1000px; height: auto"/>
   <figcaption><span class="dnerf">Table 1.</span> Experimental results for LLaMA2 and LLaMA3.1 under varying prefix lengths, generating sequences from 20K to 100K tokens.</figcaption>
@@ -66,7 +68,6 @@ code: https://github.com/bigai-nlco/LatentSeek
 LatentSeek is a novel framework that enhances LLM reasoning through **Test-Time Instance-level Adaptation (TTIA)** within the model's **latent space**. Specifically, LatentSeek leverages policy gradient to iteratively update latent representations, guided by self-generated reward signals. 
 
 
-## TTIA in Latent Space
 
 
 <!--Given a reasoning problem instance $\mathbf{c}$ as a context prompt, a pre-trained auto-regressive language model $\pi$, a reasoning token sequence $\mathbf{x} = (x\_1, x\_2, \ldots, x\_T)$, and denote the corresponding sequence of latent representations of $\mathbf{x}$ as $\mathbf{z} = (z\_1, z\_2, z\_3, \ldots, z\_T)$, the objective is:
